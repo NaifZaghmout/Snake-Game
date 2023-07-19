@@ -74,3 +74,27 @@ cells = [(col , row) for row in range (FIELD_HEIGHT) for col in range (FIELD_WID
 
 
 
+snake_body = [
+    (7 , FIELD_HEIGHT // 2),
+    (6 , FIELD_HEIGHT // 2),
+    (5 , FIELD_HEIGHT // 2)
+    ]
+
+
+
+
+directions = {'left': (-1 ,0) , 'right': ( 1 , 0) , 'up': (0 , -1) , 'down': (0 , 1)}  
+direction = directions['right']
+has_eaten = False
+apple_Pos = place_apple()
+
+
+
+play_again = True
+
+
+
+
+
+
+
