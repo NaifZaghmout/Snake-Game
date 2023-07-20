@@ -104,3 +104,16 @@ while play_again:
             os.system('clear')
             play_again = False
             break
+
+
+
+    update_snake()
+    apple_cllision()
+
+
+    if snake_body[0][1] in (0 , FIELD_HEIGHT -1) or \
+           snake_body[0][0] in (0 ,FIELD_WIDTH -1) or \
+           snake_body[0] in snake_body[1:]:
+        os.system('clear')
+        print('Game Over!')
+        break
