@@ -81,40 +81,47 @@ play_again = True
 
 
 while play_again:
+    snake_body=[
+        (7, FIELD_HEIGHT // 2),
+        (6, FIELD_HEIGHT // 2),
+        (5, FIELD_HEIGHT // 2)
+    ]
 
-    if has_eaten:
-        apple_Pos = place_apple()
-        has_eaten = False
+    direction = directions['right']
+    has_eaten = False
+    apple_Pos = place_apple()
 
-    print_filed()
+    while play_again:
+        if has_eaten:
+           apple_Pos = place_apple()
+           has_eaten = False
 
-    text, _ = timedInput('', timeout=0.3)
-    match text:
-        case 'w':
-            direction = directions['up']
-        case 'a':
-            direction = directions['left']
-        case 's':
-            direction = directions['down']
-        case 'd':
-            direction = directions['right']
-        case 'q':
-            os.system('clear')
-            play_again = False
-            break
+        print_filed()
 
-    update_snake()
-    apple_cllision()
+        text, _ = timedInput('', timeout=0.3)
+        match text:
+                case 'w':
+                    direction = directions['up']
+                case 'a':
+                    direction = directions['left']
+                case 's':
+                    direction = directions['down']
+                case 'd':
+                    direction = directions['right']
+                case 'q':
+                    os.system('clear')
+                    play_again = False
+                    break
+
+        update_snake()
+        apple_cllision()
 
     if snake_body[0][1] in (0, FIELD_HEIGHT - 1) or \
-        snake_body[0][0] in (0, FIELD_WIDTH - 1) or \
-            snake_body[0] in snake_body[1:]:
-        os.system('clear')
-        print('Game Over!')
-        break
-
-if not play_again:
-    pass 
+                    snake_body[0][0] in (0, FIELD_WIDTH - 1) or \
+                    snake_body[0] in snake_body[1:]:
+            os.system('clear')
+            print('Game Over!')
+            break
 
 
 print("Play again? (y/n)")
@@ -122,4 +129,6 @@ choice, _ = timedInput('', timeout=3)
 
 if choice.lower() != 'y':
     play_again = False
-    
+
+else:
+    play_again = True
