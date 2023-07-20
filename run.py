@@ -93,8 +93,22 @@ apple_Pos = place_apple()
 play_again = True
 
 
+while play_again:
 
 
 
+    snake_body = [
+        (7 , FIELD_HEIGHT // 2),
+        (6 , FIELD_HEIGHT // 2),
+        (5 , FIELD_HEIGHT // 2)
+    ]
+
+    direction = directions['right']
+    has_eaten = False
+    apple_Pos = place_apple()
 
 
+    os.system = ['clear']
+
+
+    print_filed()
