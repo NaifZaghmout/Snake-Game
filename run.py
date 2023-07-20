@@ -34,7 +34,7 @@ def update_snake():
     new_head = snake_body[0][0] + direction[0], snake_body[0][1] + direction[1]
     snake_body.insert(0, new_head)
     if not has_eaten:
-        snake_body.pop[-1]
+        snake_body.pop(-1)
     has_eaten = False
 
 
@@ -86,12 +86,10 @@ while play_again:
         apple_Pos = place_apple()
         has_eaten = False
 
-
     print_filed()
 
-
-    text , _ = timedInput('', timeout=0.3)
-    match txt:
+    text, _ = timedInput('', timeout=0.3)
+    match text:
         case 'w':
             direction = directions['up']
         case 'a':
@@ -105,15 +103,23 @@ while play_again:
             play_again = False
             break
 
-
-
     update_snake()
     apple_cllision()
 
-
-    if snake_body[0][1] in (0 , FIELD_HEIGHT -1) or \
-           snake_body[0][0] in (0 ,FIELD_WIDTH -1) or \
-           snake_body[0] in snake_body[1:]:
+    if snake_body[0][1] in (0, FIELD_HEIGHT - 1) or \
+        snake_body[0][0] in (0, FIELD_WIDTH - 1) or \
+            snake_body[0] in snake_body[1:]:
         os.system('clear')
         print('Game Over!')
         break
+
+if not play_again:
+    pass 
+
+
+print("Play again? (y/n)")
+choice, _ = timedInput('', timeout=3)
+
+if choice.lower() != 'y':
+    play_again = False
+    
