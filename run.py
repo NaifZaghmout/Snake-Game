@@ -30,13 +30,26 @@ def print_filed():
 
 
 def update_snake():
-    global has_eaten
+    global has_eaten , direction
     new_head = snake_body[0][0] + direction[0], snake_body[0][1] + direction[1]
     snake_body.insert(0, new_head)
     if not has_eaten:
         snake_body.pop(-1)
     has_eaten = False
 
+
+    if snake_body[0][1] in (0 , FIELD_HEIGHT -1) or snake_body[0][0] in (0 , FIELD_WIDTH -1):
+
+        direction = (-direction[0] , -direction[1])
+
+    if snake_body[0] in snake_body[1:]:
+        os.system('clear')
+        print('Game Over!')
+        global play_again
+        play_again = False
+
+
+   
 
 def apple_cllision():
     global apple_Pos, has_eaten
