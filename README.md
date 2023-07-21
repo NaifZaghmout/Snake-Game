@@ -1,32 +1,36 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Snake Game
 
-Welcome,
+![Snake Game](snake_game_screenshot)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+## Description
 
-## Reminders
+Snake Game is a simple text-based implementation of the classic Snake game. The player controls a snake that moves around the play field to eat apples. The game ends when the snake collides with the boundaries of the play field.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+The game is built in Python and uses the `pytimedinput` library for input with a timeout, `colorama` for terminal text color, and `random` for generating random positions.
 
-## Creating the Heroku app
+## How to Play
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+1. Clone the repository or download the source code.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+2. Make sure you have Python 3.x installed on your system.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+3. Install the required libraries using pip:
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+   ```bash
+*  pip install pytimedinput colorama
 
-Connect your GitHub repository and deploy as normal.
+4. Run the game:
 
-## Constraints
+* python snake_game.py
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+5. Use the following keys to control the snake:
 
----
+* w: Move the snake up.
+* a: Move the snake left.
+* s: Move the snake down.
+* d: Move the snake right.
+* q: Quit the game.
 
-Happy coding!
+6. Try to eat as many apples as possible and avoid hitting the boundaries or the snake's body.
+
+7. After the game ends, you will be prompted to play again. Enter Y to play again or N to quit the game.
