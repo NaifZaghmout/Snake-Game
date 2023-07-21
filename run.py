@@ -30,17 +30,16 @@ def print_filed():
 
 
 def update_snake():
-    global has_eaten , direction
+    global has_eaten, direction
     new_head = snake_body[0][0] + direction[0], snake_body[0][1] + direction[1]
     snake_body.insert(0, new_head)
     if not has_eaten:
         snake_body.pop(-1)
     has_eaten = False
 
+    if snake_body[0][1] in (0, FIELD_HEIGHT - 1) or snake_body[0][0] in (0, FIELD_WIDTH - 1):
 
-    if snake_body[0][1] in (0 , FIELD_HEIGHT -1) or snake_body[0][0] in (0 , FIELD_WIDTH -1):
-
-        direction = (-direction[0] , -direction[1])
+        direction = (-direction[0], -direction[1])
 
     if snake_body[0] in snake_body[1:]:
         os.system('clear')
@@ -48,8 +47,6 @@ def update_snake():
         global play_again
         play_again = False
 
-
-   
 
 def apple_cllision():
     global apple_Pos, has_eaten
@@ -93,8 +90,10 @@ apple_Pos = place_apple()
 play_again = True
 
 
+# ... (previous code remains the same)
+
 while play_again:
-    snake_body=[
+    snake_body = [
         (7, FIELD_HEIGHT // 2),
         (6, FIELD_HEIGHT // 2),
         (5, FIELD_HEIGHT // 2)
@@ -106,42 +105,44 @@ while play_again:
 
     while play_again:
         if has_eaten:
-           apple_Pos = place_apple()
-           has_eaten = False
+            apple_Pos = place_apple()
+            has_eaten = False
 
         print_filed()
 
         text, _ = timedInput('', timeout=0.3)
         match text:
-                case 'w':
-                    direction = directions['up']
-                case 'a':
-                    direction = directions['left']
-                case 's':
-                    direction = directions['down']
-                case 'd':
-                    direction = directions['right']
-                case 'q':
-                    os.system('clear')
-                    play_again = False
-                    break
+            case 'w':
+                direction = directions['up']
+            case 'a':
+                direction = directions['left']
+            case 's':
+                direction = directions['down']
+            case 'd':
+                direction = directions['right']
+            case 'q':
+                os.system('clear')
+                play_again = False
+                break
 
         update_snake()
         apple_cllision()
 
-    if snake_body[0][1] in (0, FIELD_HEIGHT - 1) or \
-                    snake_body[0][0] in (0, FIELD_WIDTH - 1) or \
-                    snake_body[0] in snake_body[1:]:
+        if snake_body[0][1] in (0, FIELD_HEIGHT - 1) or \
+                snake_body[0][0] in (0, FIELD_WIDTH - 1) or \
+                snake_body[0] in snake_body[1:]:
             os.system('clear')
             print('Game Over!')
             break
 
+    print("Play again? (y/n)")
+    while True:
+        choice = input().lower()
+        if choice in ('y', 'n'):
+            break
+        print("Invalid choice. Please enter 'y' or 'n'.")
 
-print("Play again? (y/n)")
-choice, _ = timedInput('', timeout=3)
-
-if choice.lower() != 'y':
-    play_again = False
-
-else:
-    play_again = True
+    if choice != 'y':
+        play_again = False
+    else:
+        play_again = True
