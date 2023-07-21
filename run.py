@@ -11,13 +11,13 @@ def print_filed():
     output = ''
     for cell in cells:
         if cell in snake_body:          # Checking if the snake is in the cell
-            output += Fore.GREEN + 'x'  # print the snake body in green
+            output += Fore.GREEN + 'X'  # print the snake body in green
 
         elif cell == apple_Pos:
-            output += Fore.RED + '*'    # print the apple in red
+            output += Fore.RED + 'o'    # print the apple in red
 
         elif cell[1] in (0, FIELD_HEIGHT - 1) or cell[0] in (0, FIELD_WIDTH - 1):
-            output += Fore.CYAN + '-'    # # Print the boundaries in cyan
+            output += Fore.CYAN + '*'    # # Print the boundaries in cyan
 
         else:
             output += ' '                # print the empty space
@@ -172,3 +172,4 @@ while play_again:
     else:
         # Set 'play_again' to True if the user chose to play again
         play_again = True
+
