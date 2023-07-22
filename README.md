@@ -101,6 +101,10 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 
 ## Testing 
 
+i have manually tested this project by doing the following:
+
+-  Passed the code through PEP8 linter and confirmed there are not problems.
+-  Tested in my local terminal and the Code Institute Heroku terminal.
 
 
 
@@ -123,7 +127,7 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 ## Remaining Bugs
 
 
-
+- No bugs remaining.
 
 
 
@@ -134,6 +138,9 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 ## Validator Testing
 
 
+-  PEP8.
+-  No errors were returend from PEP8online.com.
+
 
 
 
@@ -143,6 +150,12 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 
 ## Deployment
 
+ this project was deployed using Code Institute mock terminal for Heroku.
+
+-  create a new heroku app.
+-  set the buildback to python and nodeJS.
+-  linked the heroku app to the repository.
+-  [Snake-Game Live Link](https://snake-game-eabe7ec81bef.herokuapp.com/)
 
 
 
