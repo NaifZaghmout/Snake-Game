@@ -1,10 +1,10 @@
 # Snake Game
 
-![Snake Game](snake_game_screenshot)
+![Snake Game](../Snake-Game/assets/images/terminal-game.png)
 
 ## Description
 
-Snake Game is a simple text-based implementation of the classic Snake game. The player controls a snake that moves around the play field to eat apples. The game ends when the snake collides with the boundaries of the play field.
+[Snake Game](https://snake-game-eabe7ec81bef.herokuapp.com/) is a simple text-based implementation of the classic Snake game. The player controls a snake that moves around the play field to eat apples. The game ends when the snake collides with the boundaries of the play field.
 
 The game is built in Python and uses the `pytimedinput` library for input with a timeout, `colorama` for terminal text color, and `random` for generating random positions.
 
