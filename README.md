@@ -9,6 +9,7 @@ Snake Game is a simple text-based implementation of the classic Snake game. The 
 The game is built in Python and uses the `pytimedinput` library for input with a timeout, `colorama` for terminal text color, and `random` for generating random positions.
 
 
+--------------------------------------------------------------
 
 
 
@@ -18,6 +19,7 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 -   pytimedinput.
 -   colorama.
 
+--------------------------------------------------------------
 
 
 
@@ -46,6 +48,11 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 7.  After the game ends, you will be prompted to play again. Enter Y to play again or N to quit the game.
 
 
+
+--------------------------------------------------------------
+
+
+
 ## Features
 
 -  Simple and intuitive controls.
@@ -53,6 +60,9 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 -  Color-coded display for snake, apples, and boundaries.
 -  Game Over message when the snake collides with the boundaries or itself.
 
+
+
+--------------------------------------------------------------
 
 
 
@@ -65,7 +75,7 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 
 -  `FIELD_WIDTH`: Integer. The width of the play field in cells.
 -  `FIELD_HEIGHT`: Integer. The height of the play field in cells.
--  `cells`: List of tuples. Represents all the cells in the play field as (x, y) coordinates.
+-  `cells`: List of tuples. Represents all the cells in the play field coordinates.
 -  `snake_body`: List of tuples. Contains the coordinates of the snake's body segments.
 -  `directions`: Dictionary. Maps the arrow keys to their respective movement directions.
 -  `direction`: Tuple. Represents the current direction the snake is moving.
@@ -81,9 +91,11 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 -  `place_apple()`: Generates a random position for a new apple, avoiding positions occupied by the snake's body.
 -  `timedInput()`: A utility function from the `pytimedinput` library that reads player input with a timeout.
 
-  These variables and functions work together to create the gameplay loop, handle user input, and update the game state based on the player's actions. The simplicity of the data model makes the Snake Game easy to understand and implement, making it a suitable project for beginners to learn Python programming concepts and game development.
+  These variables and functions work together to create the gameplay loop, handle user input, and update the game state based on the player's actions. The simplicity of the data model makes the Snake Game easy to understand and implement, making it a suitable project to learn Python programming concepts and game development.
 
 
+
+--------------------------------------------------------------
 
 
 
@@ -93,7 +105,18 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 
 
 
+
+--------------------------------------------------------------
+
+
+
 ## Bugs
+
+
+
+
+
+--------------------------------------------------------------
 
 
 
@@ -102,7 +125,19 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 
 
 
+
+
+--------------------------------------------------------------
+
+
+
 ## Validator Testing
+
+
+
+
+
+--------------------------------------------------------------
 
 
 
@@ -110,4 +145,13 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 
 
 
+
+
+
+--------------------------------------------------------------
+
+
 ## Credits
+
+
+
