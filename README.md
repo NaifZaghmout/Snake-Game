@@ -101,7 +101,7 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 
 ## Testing 
 
-i have manually tested this project by doing the following:
+   i have manually tested this project by doing the following:
 
 -  Passed the code through PEP8 linter and confirmed there are not problems.
 -  Tested in my local terminal and the Code Institute Heroku terminal.
@@ -116,8 +116,18 @@ i have manually tested this project by doing the following:
 
 ## Bugs
 
+-  In the Snake Game, the snake continues moving even after reaching the boundaries of the play field, eventually going outside 
+   the field instead of triggering the "Game Over" condition.
 
+### Resolution :
 
+-  The issue was resolved by updating the `update_snake()` function to include a check for boundary collisions.
+
+*  The first change is in the update_snake() function. I added the direction variable to the global statement to be able to  
+   modify it within the function and keep track of the snake's movement direction.
+
+*  I also added a new section of code within the update_snake() function to check if the snake's head is hitting the play field 
+   boundaries. If it does, I reverse the direction, effectively making the snake move in the opposite direction to stay within the boundaries.
 
 
 --------------------------------------------------------------
@@ -139,6 +149,7 @@ i have manually tested this project by doing the following:
 
 
 -  PEP8.
+
 -  No errors were returend from PEP8online.com.
 
 
@@ -155,7 +166,7 @@ i have manually tested this project by doing the following:
 -  create a new heroku app.
 -  set the buildback to python and nodeJS.
 -  linked the heroku app to the repository.
--  [Snake-Game Live Link](https://snake-game-eabe7ec81bef.herokuapp.com/)
+-  [Snake-Game Link](https://snake-game-eabe7ec81bef.herokuapp.com/)
 
 
 
@@ -164,7 +175,15 @@ i have manually tested this project by doing the following:
 --------------------------------------------------------------
 
 
+
 ## Credits
 
+- I watched video's on [Youtube](https://www.youtube.com/) to help me understand how the Snake Game works :
+
+- I watched [clear code](https://www.youtube.com/watch?v=lAIawk2IVIM&list=LL&index=2&t=1819s) 
+
+- I watched [codezilla](https://www.youtube.com/watch?v=NFqjO5z1jx0)
 
 
+
+--------------------------------------------------------------
