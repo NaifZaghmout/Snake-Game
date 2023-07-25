@@ -1,6 +1,6 @@
 # Snake Game
 
-![Snake Game](../Snake-Game/assets/images/terminal-game.png)
+![Snake Game](assets/images/terminal-game.png)
 
 ## Description
 

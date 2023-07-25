@@ -16,14 +16,16 @@ def print_filed():
         elif cell == apple_Pos:
             output += Fore.RED + 'o'    # print the apple in red
 
-        elif cell[1] in (0, FIELD_HEIGHT - 1) or cell[0] in (0, FIELD_WIDTH - 1):
+        elif (
+            cell[1] in (0, FIELD_HEIGHT - 1) or cell[0] in (0, FIELD_WIDTH - 1)
+        ):
             output += Fore.CYAN + '*'    # # Print the boundaries in cyan
 
         else:
             output += ' '                # print the empty space
 
         if cell[0] == FIELD_WIDTH - 1:
-            output += '\n'               # move to the next line after printing each row
+            output += '\n'  # move to the next line after printing each row
 
     os.system('clear')
     # clear the console and print the play field
@@ -32,7 +34,7 @@ def print_filed():
 
 def update_snake():
     '''
-    function to update the snake position 
+    function to update the snake position
     '''
 
     global has_eaten, direction
@@ -44,10 +46,13 @@ def update_snake():
         snake_body.pop(-1)
     has_eaten = False
 
-    if snake_body[0][1] in (0, FIELD_HEIGHT - 1) or snake_body[0][0] in (0, FIELD_WIDTH - 1):
+    # if (
+    #     snake_body[0][1] in (0, FIELD_HEIGHT - 1) or
+    #     snake_body[0][0] in (0, FIELD_WIDTH - 1)
+    # ):
 
-        # Reverse the direction when hitting a boundary
-        direction = (-direction[0], -direction[1])
+    #     # Reverse the direction when hitting a boundary
+    #     direction = (-direction[0], -direction[1])
 
     if snake_body[0] in snake_body[1:]:
         os.system('clear')
@@ -66,7 +71,7 @@ def apple_cllision():
 
     if snake_body[0] == apple_Pos:
         apple_Pos = place_apple()          # Generate a new apple position
-        has_eaten = True                   # Indicate that the snake has eaten the apple
+        has_eaten = True  # Indicate that the snake has eaten the apple
 
 
 def place_apple():
@@ -87,7 +92,8 @@ init(autoreset=True)
 # Set the size of the play field
 FIELD_WIDTH = 25
 FIELD_HEIGHT = 15
-cells = [(col, row) for row in range(FIELD_HEIGHT)    # Generate all cells in the play field
+# Generate all cells in the play field
+cells = [(col, row) for row in range(FIELD_HEIGHT)
          for col in range(FIELD_WIDTH)]
 
 
@@ -108,8 +114,11 @@ apple_Pos = place_apple()
 play_again = True
 
 # Game loop starts here
+
 while play_again:
-     # Reinitialize the snake's position and direction
+    '''
+    Reinitialize the snake's position and direction
+    '''
     snake_body = [
         (7, FIELD_HEIGHT // 2),
         (6, FIELD_HEIGHT // 2),
@@ -120,8 +129,25 @@ while play_again:
     has_eaten = False
     apple_Pos = place_apple()
 
+
+    print(Fore.GREEN + "Weclome to the snake game!!!!")
+    print("Weclome to the snake game!!!!")
+    print("Weclome to the snake game!!!!")
+    print("Weclome to the snake game!!!!")
+    print("Weclome to the snake game!!!!")
+
+    while True:
+        user_choice = input("Do you want to start palying? y or n\n")
+        if user_choice in ('y', 'n'):
+            break
+    if user_choice == 'y':
+        game_running = True
+    else:
+        print("Thanks for visiting this game!!")
+        break
+
     # Inner game loop for handling input and updating the game state
-    while play_again:
+    while game_running:
         if has_eaten:
             apple_Pos = place_apple()
             has_eaten = False
@@ -141,18 +167,17 @@ while play_again:
                 direction = directions['right']
             case 'q':
                 os.system('clear')
-                play_again = False
+                game_running = False
                 break
 
-        
-        update_snake()                      # Update the snake's position and check for collisions
-        apple_cllision()                    # Check if the snake has eaten the apple
+        apple_cllision()               # Check if the snake has eaten the apple
+        update_snake()  # Update the snake's position and check for collisions
 
         if snake_body[0][1] in (0, FIELD_HEIGHT - 1) or \
                 snake_body[0][0] in (0, FIELD_WIDTH - 1) or \
                 snake_body[0] in snake_body[1:]:
             os.system('clear')
-            print('Game Over!')             # Print "Game Over!" when the snake coll
+            print('Game Over!')  # Print "Game Over!" when the snake coll
             break
 
     print("Play again? (y/n)")
@@ -161,7 +186,7 @@ while play_again:
     '''
     while True:
         choice = input().lower()
-        if choice in ('y', 'n'):              # Check if the user's choice is y or n
+        if choice in ('y', 'n'):  # Check if the user's choice is y or n
             break
         # Print an error message if the user enters an invalid choice
         print("Invalid choice. Please enter 'y' or 'n'.")
