@@ -129,12 +129,13 @@ while play_again:
     has_eaten = False
     apple_Pos = place_apple()
 
-
     print(Fore.GREEN + "Weclome to the snake game!!!!")
-    print("Weclome to the snake game!!!!")
-    print("Weclome to the snake game!!!!")
-    print("Weclome to the snake game!!!!")
-    print("Weclome to the snake game!!!!")
+    print(Fore.RED + "Instructions on how to play the snake game:")
+    print(Fore.GREEN + "w: Move the snake up.")
+    print(Fore.GREEN + "a: Move the snake left.")
+    print(Fore.GREEN + "s: Move the snake down.")
+    print(Fore.GREEN + "d: Move the snake right.")
+    print(Fore.GREEN + "q: Quit the game.")
 
     while True:
         user_choice = input("Do you want to start palying? y or n\n")
@@ -197,4 +198,3 @@ while play_again:
     else:
         # Set 'play_again' to True if the user chose to play again
         play_again = True
-
