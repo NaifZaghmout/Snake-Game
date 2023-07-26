@@ -61,6 +61,11 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 -  Game Over message when the snake collides with the boundaries or itself.
 
 
+- [Welcoming massage with the instruction about how to play](assets/images/welcome-massage.png).
+
+- [If user choice 'y' the game will start](assets/images/playing.png).
+
+- [If a user lose it will show 'Game Over' and ask if the user wants to play again or not](assets/images/game-over.png).
 
 --------------------------------------------------------------
 
@@ -148,10 +153,10 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 ## Validator Testing
 
 
--  PEP8.
 
--  No errors were returend from PEP8online.com.
+-  No errors were returend.
 
+-  [Code Institute CI Python Linter](assets/images/tester.png).
 
 
 
