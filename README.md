@@ -62,16 +62,20 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 
 
 
--  Welcoming massage with the instruction about how to play.
+
+    Welcoming massage with the instruction about how to play:
+
    ![Welcoming massage with the instruction about how to play](assets/images/welcome-massage.png).
 
 
 
--  If user choice 'y' the game will start.
+   If user choice 'y' the game will start:
+
    ![If user choice 'y' the game will start](assets/images/playing.png).
 
 
--  If a user lose it will show 'Game Over' and ask if the user wants to play again or not.
+   If a user lose it will show 'Game Over' and ask if the user wants to play again or not:
+
    ![If a user lose it will show 'Game Over' and ask if the user wants to play again or not](assets/images/game-over.png).
 
 --------------------------------------------------------------
