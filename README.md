@@ -4,7 +4,7 @@
 
 ## Description
 
-[Snake Game](https://snake-game-eabe7ec81bef.herokuapp.com/) is a simple text-based implementation of the classic Snake game. The player controls a snake that moves around the play field to eat apples. The game ends when the snake collides with the boundaries of the play field.
+[Snake Game](https://snake-game-rw9s.onrender.com) is a simple text-based implementation of the classic Snake game. The player controls a snake that moves around the play field to eat apples. The game ends when the snake collides with the boundaries of the play field.
 
 The game is built in Python and uses the `pytimedinput` library for input with a timeout, `colorama` for terminal text color, and `random` for generating random positions.
 
@@ -179,12 +179,12 @@ The game is built in Python and uses the `pytimedinput` library for input with a
 
 ## Deployment
 
- this project was deployed using Code Institute mock terminal for Heroku.
+ this project was deployed using Code Institute mock terminal for Render.
 
--  create a new heroku app.
+-  create a new Render app.
 -  set the buildback to python and nodeJS.
 -  linked the heroku app to the repository.
--  [Snake-Game Link](https://snake-game-eabe7ec81bef.herokuapp.com/)
+-  [Snake-Game Link](https://snake-game-rw9s.onrender.com)
 
 
 
